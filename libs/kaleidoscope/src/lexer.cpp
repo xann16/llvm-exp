@@ -14,7 +14,7 @@ namespace llvm_exp::kaleidoscope
             while (std::isalnum(m_last_char = input.get()))
             {
                 m_current_identifier += static_cast<char>(m_last_char);
-            };
+            }
 
             if (m_current_identifier == "def") return token_t::kw_def;
             else if (m_current_identifier == "extern") return token_t::kw_extern;
@@ -56,4 +56,3 @@ namespace llvm_exp::kaleidoscope
         return token_t::operator_;
     }
 }
-

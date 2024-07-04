@@ -4,7 +4,7 @@ namespace llvm_exp::kaleidoscope
     {
         invalid,        
         end_of_file,
-        
+
         identifier,
         operator_,
         num_literal,

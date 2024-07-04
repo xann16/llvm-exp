@@ -44,6 +44,11 @@ if (BUILD_TESTING)
             Catch2::Catch2WithMain    
     )
 
+    target_compile_options(${PROJECT_NAME}-unit-tests
+        PRIVATE
+            "-Wno-float-equal"
+    )
+
     catch_discover_tests(${PROJECT_NAME}-unit-tests
         PROPERTIES
             SKIP_RETURN_CODE 4    

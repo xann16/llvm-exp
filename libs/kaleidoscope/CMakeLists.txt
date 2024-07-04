@@ -4,13 +4,15 @@ project(
 )
 
 set(HEADERS
-    include/kaleidoscope/sample.hpp
+    include/kaleidoscope/lexer.hpp
+    include/kaleidoscope/token.hpp
 )
 set(SOURCES
-    src/sample.cpp
+    src/lexer.cpp
+    src/token.cpp
 )
 set(TESTS
-    tests/sample.test.cpp
+    tests/lexer.test.cpp
 )
 
 add_library(${PROJECT_NAME}
@@ -42,6 +44,9 @@ if (BUILD_TESTING)
             Catch2::Catch2WithMain    
     )
 
-    catch_discover_tests(${PROJECT_NAME}-unit-tests)
+    catch_discover_tests(${PROJECT_NAME}-unit-tests
+        PROPERTIES
+            SKIP_RETURN_CODE 4    
+    )
 
 endif()

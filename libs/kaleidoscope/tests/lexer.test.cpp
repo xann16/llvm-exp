@@ -1,8 +1,9 @@
 #include <catch2/catch_test_macros.hpp>
+
 #include <kaleidoscope/lexer.hpp>
 
-#include <string>
 #include <sstream>
+#include <string>
 
 TEST_CASE("Kaleidoscope lexer should handle empty string", "[kaleidoscope][lexer]")
 {

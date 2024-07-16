@@ -1,3 +1,5 @@
+#pragma once
+
 namespace llvm_exp::kaleidoscope
 {
     enum class token_t

@@ -4,15 +4,32 @@ project(
 )
 
 set(HEADERS
+    include/kaleidoscope/ast/node.hpp
+    include/kaleidoscope/ast/expression.hpp
+    include/kaleidoscope/ast/number_expression.hpp
+    include/kaleidoscope/ast/variable_expression.hpp
+    include/kaleidoscope/ast/binary_expression.hpp
+    include/kaleidoscope/ast/function_call_expression.hpp
+    include/kaleidoscope/ast/function_prototype.hpp
+    include/kaleidoscope/ast/function_definition.hpp
     include/kaleidoscope/lexer.hpp
     include/kaleidoscope/token.hpp
 )
 set(SOURCES
+    src/ast/node.cpp
+    src/ast/expression.cpp
+    src/ast/number_expression.cpp
+    src/ast/variable_expression.cpp
+    src/ast/binary_expression.cpp
+    src/ast/function_call_expression.cpp
+    src/ast/function_prototype.cpp
+    src/ast/function_definition.cpp
     src/lexer.cpp
     src/token.cpp
 )
 set(TESTS
     tests/lexer.test.cpp
+    tests/ast.test.cpp
 )
 
 add_library(${PROJECT_NAME}
